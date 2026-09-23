@@ -22,7 +22,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY backend/ backend/
 COPY documents/ documents/
-COPY main.py evaluate.py goldens.json sessions.json ./
+COPY main.py evaluate.py goldens.json ./
 COPY --from=frontend-build /app/frontend/dist frontend/dist
 
 EXPOSE 8000
