@@ -35,6 +35,9 @@ jobs:
         working-directory: frontend
         run: npm run build
 
+      - name: Prepare CI environment
+        run: cp .env.example .env
+
       - name: Validate Docker Compose
         run: docker compose config
 
